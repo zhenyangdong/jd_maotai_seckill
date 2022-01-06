@@ -28,7 +28,7 @@ class Timer(object):
         从京东服务器获取时间毫秒
         :return:
         """
-        url = 'https://a.jd.com//ajax/queryServerData.html'
+        url = 'https://api.m.jd.com/client.action?functionId=queryMaterialProducts&client=wh5'
         ret = requests.get(url).text
         js = json.loads(ret)
         return int(js["serverTime"])
